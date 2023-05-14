@@ -1,0 +1,166 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "My API",
+    "description": "Description",
+    "version": "1.0.0"
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/person/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/person/{identification}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "identification",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "identification",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Update person",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "firstNames": {
+                  "type": "string",
+                  "example": "lenin"
+                },
+                "lastNames": {
+                  "type": "string",
+                  "example": "samaniego"
+                },
+                "gender": {
+                  "type": "string",
+                  "example": "masculino"
+                },
+                "age": {
+                  "type": "number",
+                  "example": 12
+                }
+              },
+              "required": [
+                "firstNames",
+                "lastNames",
+                "gender",
+                "age"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      },
+      "delete": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "identification",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    },
+    "/person": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "obj",
+            "in": "body",
+            "description": "Create person",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "identification": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "firstNames": {
+                  "type": "string",
+                  "example": "lenin"
+                },
+                "lastNames": {
+                  "type": "string",
+                  "example": "samaniego"
+                },
+                "gender": {
+                  "type": "string",
+                  "example": "masculino"
+                },
+                "age": {
+                  "type": "number",
+                  "example": 12
+                }
+              },
+              "required": [
+                "identification",
+                "firstNames",
+                "lastNames",
+                "gender",
+                "age"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
+      }
+    }
+  }
+}

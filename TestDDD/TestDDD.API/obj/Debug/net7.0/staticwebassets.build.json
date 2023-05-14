@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VtUWR8gzsZXVEumQd1wBvkWmbeNiUA9ET6DSBGhNLHk=",
+  "Source": "TestDDD.API",
+  "BasePath": "_content/TestDDD.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
