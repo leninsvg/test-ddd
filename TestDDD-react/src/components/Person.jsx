@@ -83,8 +83,8 @@ export const Person = forwardRef((
 })
 
 Person.propTypes = {
-    updatePerson: PropTypes.string.updatePerson,
-    createPerson: PropTypes.string.createPerson,
+    updatePerson: PropTypes.any,
+    createPerson: PropTypes.any,
 }
 
 Person.defaultProps = {}
