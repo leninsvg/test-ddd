@@ -7,7 +7,7 @@ using TestDDD.Domain.Entities;
 namespace TestDDD.API.Controllers;
 
 [ApiController]
-[Route("api/persons")]
+[Route("person")]
 public class PersonController : ControllerBase
 {
     private readonly PersonServices _personServices;
