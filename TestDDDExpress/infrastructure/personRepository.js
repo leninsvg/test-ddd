@@ -15,8 +15,6 @@ class PersonRepository {
         timestamps: false
     });
 
-    constructor() {
-    }
 
     getPeople = async () => {
         return await this.person.findAll()
