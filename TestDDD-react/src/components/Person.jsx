@@ -40,7 +40,7 @@ export const Person = forwardRef((
     return (<>
         <h1>{personAction}</h1>
         <div>
-            <label htmlFor="">Cedula</label>
+            <label htmlFor="">Cedula1</label>
             <input type="text" name="identification"
                    value={identification} onChange={onInputChange}/>
         </div>
