@@ -16,6 +16,11 @@ public class PersonRepository : IPersonRepository
     {
         return this._testDddContext.Persons.Find(identification);
     }
+    
+    public List<PersonEntity> GetPeople()
+    {
+        return this._testDddContext.Persons.Where(x => true).ToList();
+    }
 
     public void AddPerson(PersonEntity person)
     {

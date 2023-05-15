@@ -17,4 +17,10 @@ public class PersonQueries
         PersonEntity personEntity = this._personRepository.GetPerson(identification);
         return personEntity;
     }
+    
+    public List<PersonEntity> GetPeople()
+    {
+        List<PersonEntity> people = this._personRepository.GetPeople();
+        return people;
+    }
 }

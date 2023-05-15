@@ -46,4 +46,11 @@ public class PersonController : ControllerBase
         PersonEntity personEntity = _personQueries.GetPerson(identification);
         return Ok(personEntity);
     }
+    
+    [HttpGet]
+    public ActionResult<List<PersonEntity>> GetPeople()
+    {
+        List<PersonEntity> people = _personQueries.GetPeople();
+        return Ok(people);
+    }
 }

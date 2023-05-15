@@ -8,4 +8,5 @@ public interface IPersonRepository
     void AddPerson(PersonEntity person);
     void UpdatePerson(PersonEntity person);
     void DeletePerson(PersonEntity person);
+    List<PersonEntity> GetPeople();
 }
