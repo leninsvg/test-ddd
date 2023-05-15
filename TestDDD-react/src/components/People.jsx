@@ -14,7 +14,11 @@ export const People = () => {
     }
 
     const updatePerson = async (identification, person) => {
-        await fetch(url + `/${identification}`, {method: 'PUT', headers: new Headers({'content-type': 'application/json'}), body: JSON.stringify(person)});
+        await fetch(url + `/${identification}`, {
+            method: 'PUT',
+            headers: new Headers({'content-type': 'application/json'}),
+            body: JSON.stringify(person)
+        });
         await getPeople()
     }
 
@@ -29,7 +33,7 @@ export const People = () => {
     }
 
     const getPeople = async () => {
-        const people =await fetch(url, {method: 'GET'}).then((response) => response.json()).then();
+        const people = await fetch(url, {method: 'GET'}).then((response) => response.json()).then();
         setPeople(people)
     }
 
@@ -51,21 +55,23 @@ export const People = () => {
             </thead>
             <tbody>
             {people.map((person, index) => (
-                // eslint-disable-next-line react/jsx-key
-                <tr>
-                    <td>
-                        <button type="button" onClick={() => personActionHandler('EDITH', person)}>Editar</button>
-                        <button type="button" onClick={() => {
-                            deletePerson(index)
-                        }}>Eliminar
-                        </button>
-                    </td>
-                    <td>{person.identification}</td>
-                    <td>{person.firstNames}</td>
-                    <td>{person.lastNames}</td>
-                    <td>{person.gender}</td>
-                    <td>{person.age}</td>
-                </tr>))}
+                <>
+                    <tr>
+                        <td>
+                            <button type="button" onClick={() => personActionHandler('EDITH', person)}>Editar</button>
+                            <button type="button" onClick={() => {
+                                deletePerson(index)
+                            }}>Eliminar
+                            </button>
+                        </td>
+                        <td>{person.identification}</td>
+                        <td>{person.firstNames}</td>
+                        <td>{person.lastNames}</td>
+                        <td>{person.gender}</td>
+                        <td>{person.age}</td>
+                    </tr>
+                </>
+            ))}
             </tbody>
         </table>
     </>)

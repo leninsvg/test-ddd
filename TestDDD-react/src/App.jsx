@@ -1,5 +1,4 @@
 import './App.css'
-import {Person} from './components/Person.jsx'
 import {People} from './components/People.jsx';
 
 
